@@ -1,0 +1,4 @@
+trovati su linkedin
+https://www.linkedin.com/in/alessioleoni?authType=name&authToken=iY1I&locale=en_US&srchid=219467291468239927583&srchindex=4&srchtotal=485&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A219467291468239927583%2CVSRPtargetId%3A53700211%2CVSRPcmpt%3Aprimary%2CVSRPnm%3Afalse%2CauthType%3Aname
+https://www.linkedin.com/in/francesco-chioni-97b3a69?authType=name&authToken=mJ24&locale=en_US&srchid=219467291468243053865&srchindex=8&srchtotal=485&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A219467291468243053865%2CVSRPtargetId%3A27839471%2CVSRPcmpt%3Aprimary%2CVSRPnm%3Afalse%2CauthType%3Aname
+ho aggiunto questa riga al file
