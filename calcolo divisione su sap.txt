@@ -1,0 +1,38 @@
+la funzione che assegna la divisione è "zz_ass_plant_mitt/vett/itin"
+questa funzione è a sua volta richiamata dalla funzione "USEREXIT_SOURCE_DETERMINATION" che l'unica attività che faà è richiamare la funzione sopra, ma è la funzione che viene effettivamente chiamata dalla userexit
+le due funzioni di cui sopra si trovano nella include MV45AFZB
+
+se il committente land 1 it, san marino o vaticano
+	se il tipo ordine è YO1,YO3,YO9,YOT,YO31,YO2,YO21,YO4,YO8,YOG,YOH,YOM,YOF,YOL,YO81  
+		prende il kunnr del destinatario merci
+		prende la divisione di consegna (knvv-werks) del destinatario merci
+		prende la priorità di consegna (knvv-lprio) del destinatario merci
+		prende il codice priorità ZSFAPRIOCLI-ZZCODPRI utilizzando la priorità di consegna knvv-lprio estratta al punto precedente. Se non lo trova il default è 2 (nota la ZSFAPRIOCLI è una tabella di trascodifica,cioè il codice priorità non è per cliente ma è una transcodifica della priorità standard di sap) (questa informazione dovrebbe servire per vedere se il cliente è a data fissa oppure variabile)
+		dalla zvdiv estrae i record per tipo ordine (auart) e provincia(regio)
+		le righe estratte vengono ordinate in maniera crescente per cap (pstlz) e chiave settore industriale (brsch)
+		se le prime due cifre del cap 
+		
+		
+		
+		
+		
+		
+
+	
+	
+la userexit_check_vbak	sembra fare dei controlli che in parte in sfa2000 sono previsti. sarebbe da approfondire con Mariarita
+la userexit si trova sempre nella include MV45AFZB e viene richiamata nella include FV45KFAK_VBAK_PRUEFEN
+
+se il committente land 1 it, san marino o vaticano
+	se il tipo ordine è YO1,YO3,YO9,YOT,YO31,YO2,YO21,YO4,YO8,YOG,YOH,YOM,YOF,YOL,YO81  
+		prende la zona di distribuzione bzirk del destinatario merci
+			solo per ordini YOF prende il gruppo clienti (kdgrp) del cliente committente e se non appartiene ad uno di questi ( 06,07,09,10,11,14,15) emette l'errore 'Tipo ordine non ammesso per cliente Non Farma'
+		dalla zvdiv estrae i record per tipo ordine (auart) e provincia(regio)
+		dalle righe estratte cerca l'ultimo record per il quale la zona di distribuzione (bzirk) è uguale a quella del destinatario merci se non esesite almeno un record emette un warning 'Regione non coincidente con quella in anagrafica'
+		dalle righe estratte cerca l'ultimo record per il quale i primi due caratteri del cap (pstlz) sono uguali ai primi due del destinatario merci se non esesite almeno un record emette un warning 'Cap non coincidente con quello in anagrafica: plant e itinerario non assegnato'
+	
+	
+	
+
+
+
